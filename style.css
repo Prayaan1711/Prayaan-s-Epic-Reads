@@ -6,7 +6,7 @@ body {
 .topnav {
     overflow: hidden;
     background-color:gray;
-    
+
 }
 
 .topnav a {
@@ -18,7 +18,8 @@ body {
     font-size: 35px;
 }
 
-.topnav a:hover {
+.topnav a:hover,
+.subnav:hover .subnavbtn {
     background-color: beige;
     color: blueviolet;
 }
@@ -26,6 +27,50 @@ body {
 .topnav a.active {
     background-color: gray;
     
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: darkgrey;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    float: left;
+    color: #39FF14;
+    text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: #eee;
+    color: blueviolet;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: block;
 }
 
 footer {
